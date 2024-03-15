@@ -11,6 +11,7 @@ module hello_world_example;
   `include "uvm_macros.svh"
   
   initial begin
+    #5
     `uvm_info("INFO", "Hello World!", UVM_LOW)
   end
 endmodule : hello_world_example
