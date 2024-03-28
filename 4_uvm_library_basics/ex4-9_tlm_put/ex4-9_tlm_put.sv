@@ -4,6 +4,7 @@
   To run:   %  irun -uvmhome $UVM_HOME ex4-9_tlm_put.sv
 *******************************************************************/
 module test;
+`define UVM_REPORT_DISABLE_FILE_LINE
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 `include "simple_packet.sv"
@@ -75,6 +76,7 @@ parent_comp parent;
 
 initial begin
   parent = parent_comp::type_id::create("parent", null);
+  `uvm_info("INIT", "TEST", UVM_LOW)
   run_test();
 end
 
