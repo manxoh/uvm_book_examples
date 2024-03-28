@@ -76,7 +76,7 @@ parent_comp parent;
 
 initial begin
   parent = parent_comp::type_id::create("parent", null);
-  `uvm_info("INIT", "TEST", UVM_LOW)
+  `uvm_info("INIT", "TEST", UVM_MEDIUM)
   run_test();
 end
 
